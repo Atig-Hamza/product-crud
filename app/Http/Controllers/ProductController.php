@@ -20,4 +20,8 @@ class ProductController extends Controller
         return $product;
     }
     
+    public function destroy(Product $product) {
+        $product->delete();
+        return response()->noContent();
+    }
 }
